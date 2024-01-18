@@ -1,0 +1,17 @@
+<h1>Sửa user tại đây</h1>
+<form action="" method="post">
+  <input type="text" name="name" value="<%= user.name %>" placeholder="<%= user.name %>" />
+  <input type="text" name="email" value="<%= user.email %>" placeholder="<%= user.email %>"/>
+  <div class="mb-3">
+    <label for="">Status</label>
+    <select name="status" class="form-select">
+        <option value="0" <%= user.status ? "selected" : ""   %>>Chua kich hoat</option>
+        <option value="1" <%= user.status ? "selected" : ""   %>>Kich hoat</option>
+
+    </select>
+  </div>
+  
+  <button class="btn btn-success">Lưu</button>
+  <a href="/users" class="btn btn-danger">Hủy</a>
+
+</form>

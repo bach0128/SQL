@@ -12,4 +12,9 @@ router.post("/add", userController.handleAdd);
 router.get("/login", userController.login);
 router.post("/login", userController.handleLogin);
 
+router.get("/edit/:id", userController.edit);
+router.post("/edit/:id", userController.handleEdit);
+
+router.post("/delete/:id", userController.delete);
+
 module.exports = router;

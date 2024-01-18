@@ -1,8 +1,10 @@
 <h1>Thêm người dùng</h1>
-<form action="" method="post">
+<form action="" method="post" class="form-control">
+  <h2><%= req.errorAdd %></h2>
   <div class="mb-3">
     <label for="">Tên</label>
     <input type="text" name="name" class="form-control" placeholder="Tên..." />
+    <span class="text-danger"> <%= req.errors.name %></span>
   </div>
   <div class="mb-3">
     <label for="">Email</label>
@@ -12,6 +14,7 @@
       class="form-control"
       placeholder="Email..."
     />
+    <span class="text-danger"> <%= req.errors.email %></span>
   </div>
   <div class="mb-3">
     <label for="">Password</label>
@@ -21,12 +24,13 @@
       class="form-control"
       placeholder="Password..."
     />
+    <span class="text-danger"> <%= req.errors.password %></span>
   </div>
   <div class="mb-3">
     <label for="">Trạng thái</label>
     <select name="status" class="form-select">
       <option value="0">Chưa kích hoạt</option>
-      <option value="1">Kích hoạt</option>
+      <!-- <option value="1">Kích hoạt</option> -->
     </select>
   </div>
 
